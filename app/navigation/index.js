@@ -1,2 +1,2 @@
-import NavigationStack from './NavigationStack';
-export default NavigationStack;
+import RootNavigator from './RootNavigator';
+export default RootNavigator;

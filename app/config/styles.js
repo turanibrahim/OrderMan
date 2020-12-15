@@ -20,6 +20,7 @@ export const AppStyles = {
     greyLighten2: '#E0E0E0',
     greyLighten3: '#EEEEEE',
     tealLighten5: '#E0F2F1',
+    greyDarken1: '#757575',
     tealLighten1: '#26A69A',
   },
   fonts: {
