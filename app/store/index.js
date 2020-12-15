@@ -3,13 +3,13 @@ import { persistStore, persistCombineReducers } from 'redux-persist';
 import AsyncStorage from '@react-native-community/async-storage';
 import { createLogger } from 'redux-logger';
 import thunk from 'redux-thunk';
-import rootReducers from './reducers'; // where reducers is a object of reducers
+import rootReducers from './reducers';
 
 const config = {
   key: 'root',
   storage: AsyncStorage,
   blacklist: ['loadingReducer'],
-  debug: true, //to get useful logging
+  debug: true,
 };
 
 const middleware = [];

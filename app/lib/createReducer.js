@@ -1,13 +1,9 @@
-/*
- * Will dynamically create reducers
- * enforcing a unique way to describe reducers
- */
+import produce from 'immer';
+
 export default function createReducer(initialState, handlers) {
-  return function reducer(state = initialState, action) {
+  return produce((draft, action) => {
     if (handlers.hasOwnProperty(action.type)) {
-      return handlers[action.type](state, action);
-    } else {
-      return state;
+      return handlers[action.type](draft, action);
     }
-  };
+  }, initialState);
 }

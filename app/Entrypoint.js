@@ -14,7 +14,7 @@ const { persistor, store } = configureStore();
 
 const theme = {
   ...DefaultTheme,
-  roundness: 2,
+  roundness: 8,
   colors: {
     ...DefaultTheme.colors,
     // primary: '#3498db',
