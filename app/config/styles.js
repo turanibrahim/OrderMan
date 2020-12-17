@@ -497,4 +497,33 @@ export const margins = {
   },
 };
 
+export const borderRadiuses = {
+  br0: {
+    borderRadius: 0,
+  },
+  br1: {
+    borderRadius: 4,
+  },
+  br2: {
+    borderRadius: 8,
+  },
+  br3: {
+    borderRadius: 12,
+  },
+  br4: {
+    borderRadius: 16,
+  },
+  br5: {
+    borderRadius: 20,
+  },
+  br6: {
+    borderRadius: 24,
+  },
+  br7: {
+    borderRadius: 28,
+  },
+  br9: {
+    borderRadius: 32,
+  },
+};
 export default AppStyles;
