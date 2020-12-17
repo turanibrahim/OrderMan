@@ -2,6 +2,7 @@ import * as React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 import { AppHeader } from '../../main/components';
 import Profile from '../containers/index';
+import PersonalInformation from '../containers/PersonalInformation';
 
 const Stack = createStackNavigator();
 
@@ -17,6 +18,14 @@ function UserFeatureNavigator() {
         options={{
           title: 'User Profile',
           showBackButton: false,
+        }}
+      />
+      <Stack.Screen
+        name="PersonalInformation"
+        component={PersonalInformation}
+        options={{
+          title: 'Personal Information',
+          showBackButton: true,
         }}
       />
     </Stack.Navigator>
