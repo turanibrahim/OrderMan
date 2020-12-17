@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import HomeFeature from '~/features/home/navigation';
+import UserFeature from '~/features/user/navigation';
 import { StyleSheet } from 'react-native';
 
 const Drawer = createDrawerNavigator();
@@ -23,6 +24,13 @@ function MainDrawerNavigator() {
       icon: 'home',
       iconType: 'default',
       component: HomeFeature,
+    },
+    {
+      name: 'User',
+      title: 'Profile',
+      icon: 'user',
+      iconType: 'default',
+      component: UserFeature,
     },
   ]);
   return (
