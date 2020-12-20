@@ -4,7 +4,7 @@
  */
 export const AppStyles = {
   colors: {
-    primary: '#C9355A',
+    primary: '#1976D2',
     secondary: '#424242',
     accent: '#82B1FF',
     error: '#FF5252',
@@ -525,5 +525,11 @@ export const borderRadiuses = {
   br9: {
     borderRadius: 32,
   },
+};
+
+export const flex = {
+  flex1: { flex: 1 },
+  flexRow: { flexDirection: 'row' },
+  flexRowReverse: { flexDirection: 'row-reverse' },
 };
 export default AppStyles;
