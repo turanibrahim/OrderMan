@@ -9,8 +9,8 @@ import { PersistGate } from 'redux-persist/es/integration/react';
 import { DefaultTheme, Provider as PaperProvider } from 'react-native-paper';
 import styles from './config/styles';
 
-import Navigator from 'app/navigation';
-import configureStore from 'app/store';
+import Navigator from './navigation';
+import configureStore from './store';
 const { persistor, store } = configureStore();
 
 const theme = {

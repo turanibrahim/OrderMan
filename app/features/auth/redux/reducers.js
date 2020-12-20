@@ -1,4 +1,4 @@
-import createReducer from 'app/lib/createReducer';
+import createReducer from '../../../lib/createReducer';
 import * as types from './types';
 
 const initialState = {
