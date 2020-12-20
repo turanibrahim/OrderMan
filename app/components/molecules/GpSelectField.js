@@ -88,7 +88,7 @@ const GpSelectField = (props) => {
       });
 
       const filteredItems = data.filter((item) =>
-        item.translatedName.toLowerCase().includes(text.toLowerCase()),
+        item.name.toLowerCase().includes(text.toLowerCase()),
       );
 
       setState((draft) => {
