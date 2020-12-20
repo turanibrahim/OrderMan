@@ -531,5 +531,13 @@ export const flex = {
   flex1: { flex: 1 },
   flexRow: { flexDirection: 'row' },
   flexRowReverse: { flexDirection: 'row-reverse' },
+  alignItemsCenter: { alignItems: 'center' },
+  alignItemsStart: { alignItems: 'flex-start' },
+  alignItemsEnd: { alignItems: 'flex-end' },
+  alignContentSB: { alignContent: 'space-between' },
+  justifyCenter: { justifyContent: 'center' },
+  justifyStart: { justifyContent: 'flex-start' },
+  justifyEnd: { justifyContent: 'flex-end' },
+  justifySB: { justifyContent: 'space-between' },
 };
 export default AppStyles;
