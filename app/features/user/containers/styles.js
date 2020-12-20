@@ -13,6 +13,12 @@ const styles = StyleSheet.create({
     overflow: 'hidden',
   },
   profileAvatar: { height: 120, resizeMode: 'contain' },
+  fab: {
+    position: 'absolute',
+    margin: 16,
+    right: 0,
+    bottom: 0,
+  },
 });
 
 export default styles;
