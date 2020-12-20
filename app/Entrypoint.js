@@ -7,6 +7,7 @@ import { ActivityIndicator } from 'react-native';
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/es/integration/react';
 import { DefaultTheme, Provider as PaperProvider } from 'react-native-paper';
+import styles from './config/styles';
 
 import Navigator from 'app/navigation';
 import configureStore from 'app/store';
@@ -17,8 +18,7 @@ const theme = {
   roundness: 8,
   colors: {
     ...DefaultTheme.colors,
-    // primary: '#3498db',
-    // accent: '#f1c40f',
+    ...styles.colors,
   },
 };
 
