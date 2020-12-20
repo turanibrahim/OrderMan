@@ -529,6 +529,7 @@ export const borderRadiuses = {
 
 export const flex = {
   flex1: { flex: 1 },
+  flexGrow: { flexGrow: 1 },
   flexRow: { flexDirection: 'row' },
   flexRowReverse: { flexDirection: 'row-reverse' },
   alignItemsCenter: { alignItems: 'center' },
