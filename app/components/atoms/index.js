@@ -1,3 +1,4 @@
 import GpFAB from './GpFAB';
+import GpTextField from './GpTextField';
 
-export { GpFAB };
+export { GpFAB, GpTextField };

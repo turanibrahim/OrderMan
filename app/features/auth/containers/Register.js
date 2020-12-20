@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { View, Image, KeyboardAvoidingView, Platform } from 'react-native';
 import { Text, Card, Button } from 'react-native-paper';
-import { GpTextInput } from '~/components';
 import { useDispatch } from 'react-redux';
+import { GpTextField } from '../../../components/atoms';
 import { registerThunk } from '../redux/thunkActions';
 import { setIsNewUser } from '~/features/main/redux/actions';
 import styles from './styles';
@@ -30,7 +30,7 @@ export default function Register({ navigation }) {
       .then(() => {
         dispatch(setIsNewUser(true));
       })
-      .catch(error => {
+      .catch((error) => {
         if (error.code === 'auth/email-already-ın-use') {
           setErrorMessage('That email address is already in use!');
         } else if (error.code === 'auth/invalid-email') {
@@ -63,23 +63,25 @@ export default function Register({ navigation }) {
               </Text>
             </View>
 
-            <GpTextInput
+            <GpTextField
               style={[my1]}
               mode="outlined"
               label="E-Mail"
               value={credentials.email}
               required
-              onChangeText={email => setCredentials({ ...credentials, email })}
+              onChangeText={(email) =>
+                setCredentials({ ...credentials, email })
+              }
             />
 
-            <GpTextInput
+            <GpTextField
               style={[my1]}
               mode="outlined"
               label="Password"
               value={credentials.password}
               secureTextEntry
               required
-              onChangeText={password =>
+              onChangeText={(password) =>
                 setCredentials({ ...credentials, password })
               }
             />
