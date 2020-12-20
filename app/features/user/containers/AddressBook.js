@@ -7,7 +7,7 @@ import { AddressListItem } from '../components';
 import { flex } from '../../../config/styles';
 import styles from './styles';
 
-const AddressBook = () => {
+const AddressBook = ({ navigation }) => {
   const { flex1 } = flex;
   const { colors } = useTheme();
 
@@ -62,6 +62,7 @@ const AddressBook = () => {
         style={styles.fab}
         backgroundColor={colors.success}
         color="white"
+        onPress={() => navigation.navigate('CreateAddress')}
       />
     </View>
   );
