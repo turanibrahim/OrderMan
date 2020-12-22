@@ -6,6 +6,7 @@ import {
   AddressBook,
   PersonalInformation,
   CreateAddress,
+  ChangePassword,
 } from '../containers';
 
 const Stack = createStackNavigator();
@@ -45,6 +46,14 @@ function UserFeatureNavigator() {
         component={CreateAddress}
         options={{
           title: 'Create Address',
+          showBackButton: true,
+        }}
+      />
+      <Stack.Screen
+        name="ChangePassword"
+        component={ChangePassword}
+        options={{
+          title: 'Change Password',
           showBackButton: true,
         }}
       />
