@@ -11,7 +11,7 @@ function AppHeader(props) {
   };
 
   return (
-    <Appbar>
+    <Appbar style={{ elevation: 0 }}>
       {showBackButton ? (
         <Appbar.Action
           color="white"

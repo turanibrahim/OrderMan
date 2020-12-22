@@ -15,7 +15,7 @@ function UserFeatureNavigator() {
         name="Cart"
         component={Cart}
         options={{
-          title: 'Cart',
+          title: 'Your Cart',
           showBackButton: false,
         }}
       />
