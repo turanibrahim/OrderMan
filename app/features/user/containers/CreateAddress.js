@@ -13,16 +13,16 @@ const CreateAddress = () => {
   const { pa1 } = paddings;
   const [state, setState] = useImmer({
     city: {
-      id: null,
-      name: null,
+      id: '',
+      name: '',
     },
     province: {
-      id: null,
-      name: null,
+      id: '',
+      name: '',
     },
     district: {
-      id: null,
-      name: null,
+      id: '',
+      name: '',
     },
     title: '',
     address: '',
@@ -77,8 +77,8 @@ const CreateAddress = () => {
               onClear={() =>
                 setState((draft) => {
                   draft.city = {
-                    id: null,
-                    name: null,
+                    id: '',
+                    name: '',
                   };
                 })
               }
@@ -86,9 +86,9 @@ const CreateAddress = () => {
 
             <GpSelectField
               data={[
-                { id: 1, name: 'deneme' },
-                { id: 2, name: 'deneme2' },
-                { id: 3, name: 'deneme3' },
+                { id: 1, name: 'province 1' },
+                { id: 2, name: 'province 2' },
+                { id: 3, name: 'province 3' },
               ]}
               value={state.province.name}
               style={[ma2, flexGrow]}
@@ -101,8 +101,8 @@ const CreateAddress = () => {
               onClear={() =>
                 setState((draft) => {
                   draft.province = {
-                    id: null,
-                    name: null,
+                    id: '',
+                    name: '',
                   };
                 })
               }
@@ -110,9 +110,9 @@ const CreateAddress = () => {
 
             <GpSelectField
               data={[
-                { id: 1, name: 'deneme' },
-                { id: 2, name: 'deneme2' },
-                { id: 3, name: 'deneme3' },
+                { id: 1, name: 'district 1' },
+                { id: 2, name: 'district 2' },
+                { id: 3, name: 'district 3' },
               ]}
               value={state.district.name}
               style={[ma2, flexGrow]}
@@ -125,8 +125,8 @@ const CreateAddress = () => {
               onClear={() =>
                 setState((draft) => {
                   draft.district = {
-                    id: null,
-                    name: null,
+                    id: '',
+                    name: '',
                   };
                 })
               }
