@@ -58,7 +58,9 @@ const Profile = ({ navigation }) => {
           end={{ x: 1, y: 0 }}
           colors={['#E040FB', '#00BCD4']}
           style={[ma2, br3]}>
-          <TouchableOpacity style={[px2, py4, styles.profileButton]}>
+          <TouchableOpacity
+            style={[px2, py4, styles.profileButton]}
+            onPress={() => navigation.navigate('ChangePassword')}>
             <CommunityIcon
               name="account-key"
               size={32}
