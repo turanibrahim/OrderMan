@@ -2,10 +2,11 @@ import React from 'react';
 import { View, ScrollView } from 'react-native';
 import { Button, Card, useTheme } from 'react-native-paper';
 import LinearGradient from 'react-native-linear-gradient';
+import { useImmer } from 'use-immer';
 import { CartListOrder } from '../components';
 import { flex, margins, paddings } from '../../../config/styles';
 
-const Cart = () => {
+const Cart = ({ navigation }) => {
   const { flex1, flexGrow, flexShrink } = flex;
   const { mx2, my2, mt1 } = margins;
   const { pa2 } = paddings;
@@ -20,6 +21,9 @@ const Cart = () => {
     blueLighten5,
     orangeDarken1,
   } = colors;
+  const [state, setState] = useImmer({
+    orders: [],
+  });
 
   return (
     <View style={flex1}>
@@ -47,7 +51,11 @@ const Cart = () => {
             </View>
           </View>
           <View style={[my2, flexShrink]}>
-            <Button dark color={orangeDarken1} mode="contained">
+            <Button
+              dark
+              color={orangeDarken1}
+              mode="contained"
+              onPress={() => navigation.navigate('Checkout')}>
               Checkout
             </Button>
           </View>

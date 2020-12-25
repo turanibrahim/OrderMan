@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 import { AppHeader } from '../../main/components';
-import { Cart } from '../containers';
+import { Cart, Checkout } from '../containers';
 
 const Stack = createStackNavigator();
 
@@ -17,6 +17,14 @@ function UserFeatureNavigator() {
         options={{
           title: 'Your Cart',
           showBackButton: false,
+        }}
+      />
+      <Stack.Screen
+        name="Checkout"
+        component={Checkout}
+        options={{
+          title: 'Checkout',
+          showBackButton: true,
         }}
       />
     </Stack.Navigator>
