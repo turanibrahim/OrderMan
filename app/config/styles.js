@@ -538,7 +538,7 @@ export const flex = {
   flex1: { flex: 1 },
   flexGrow: { flexGrow: 1 },
   flexRow: { flexDirection: 'row' },
-  flexRowReverse: { flexDirection: 'row-reverse' },
+  flexRowRev: { flexDirection: 'row-reverse' },
   alignItemsCenter: { alignItems: 'center' },
   alignItemsStart: { alignItems: 'flex-start' },
   alignItemsEnd: { alignItems: 'flex-end' },
