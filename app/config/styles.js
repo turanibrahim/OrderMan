@@ -4,7 +4,7 @@
  */
 export const AppStyles = {
   colors: {
-    primary: '#C9355A',
+    primary: '#1976D2',
     secondary: '#424242',
     accent: '#82B1FF',
     error: '#FF5252',
@@ -12,6 +12,12 @@ export const AppStyles = {
     success: '#4CAF50',
     warning: '#FFC107',
     orangeDarken1: '#FB8C00',
+    blueLighten5: '#E3F2FD',
+    blueLighten4: '#BBDEFB',
+    blueLighten3: '#90CAF9',
+    blueLighten2: '#64B5F6',
+    blueLighten1: '#42A5F5',
+    blueDarken1: '#1E88E5',
     blueDarken2: '#1976D2',
     lightBlueDarken4: '#01579B',
     greenDarken3: '#2E7D32',
@@ -21,6 +27,7 @@ export const AppStyles = {
     greyLighten3: '#EEEEEE',
     tealLighten5: '#E0F2F1',
     greyDarken1: '#757575',
+    greyDarken2: '#424242',
     tealLighten1: '#26A69A',
   },
   fonts: {
@@ -497,4 +504,48 @@ export const margins = {
   },
 };
 
+export const borderRadiuses = {
+  br0: {
+    borderRadius: 0,
+  },
+  br1: {
+    borderRadius: 4,
+  },
+  br2: {
+    borderRadius: 8,
+  },
+  br3: {
+    borderRadius: 12,
+  },
+  br4: {
+    borderRadius: 16,
+  },
+  br5: {
+    borderRadius: 20,
+  },
+  br6: {
+    borderRadius: 24,
+  },
+  br7: {
+    borderRadius: 28,
+  },
+  br9: {
+    borderRadius: 32,
+  },
+};
+
+export const flex = {
+  flex1: { flex: 1 },
+  flexGrow: { flexGrow: 1 },
+  flexRow: { flexDirection: 'row' },
+  flexRowReverse: { flexDirection: 'row-reverse' },
+  alignItemsCenter: { alignItems: 'center' },
+  alignItemsStart: { alignItems: 'flex-start' },
+  alignItemsEnd: { alignItems: 'flex-end' },
+  alignContentSB: { alignContent: 'space-between' },
+  justifyCenter: { justifyContent: 'center' },
+  justifyStart: { justifyContent: 'flex-start' },
+  justifyEnd: { justifyContent: 'flex-end' },
+  justifySB: { justifyContent: 'space-between' },
+};
 export default AppStyles;

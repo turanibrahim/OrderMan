@@ -5,6 +5,6 @@ const initialState = {
   //
 };
 
-export const authReducer = createReducer(initialState, {
+export const cartReducer = createReducer(initialState, {
   //
 });

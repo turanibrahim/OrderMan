@@ -1,7 +1,6 @@
-import React, { useState, useCallback } from 'react';
-import { View, Image, KeyboardAvoidingView, Platform } from 'react-native';
+import React, { useState } from 'react';
+import { View, Image, KeyboardAvoidingView } from 'react-native';
 import { Text, TextInput, Card, Button } from 'react-native-paper';
-import { GpTextInput } from '~/components';
 import { useDispatch } from 'react-redux';
 import { loginThunk } from '../redux/thunkActions';
 import styles from './styles';
@@ -28,7 +27,7 @@ export default function Login({ navigation }) {
       .then(() => {
         setLoginProcessing(false);
       })
-      .catch(error => {
+      .catch((error) => {
         console.log(error);
         if (error) {
           setErrorMessage('Username or password is not valid!');
@@ -54,20 +53,22 @@ export default function Login({ navigation }) {
             </View>
 
             <TextInput
-              style={[my1, { flexDrection: 'row' }]}
+              style={[my1, { flexDirection: 'row' }]}
               mode="outlined"
               label="E-Mail"
               value={credentials.emial}
-              onChangeText={email => setCredentials({ ...credentials, email })}
+              onChangeText={(email) =>
+                setCredentials({ ...credentials, email })
+              }
             />
 
             <TextInput
-              style={[my1, { flexDrection: 'row' }]}
+              style={[my1, { flexDirection: 'row' }]}
               mode="outlined"
               label="Password"
               value={credentials.password}
               secureTextEntry
-              onChangeText={password =>
+              onChangeText={(password) =>
                 setCredentials({ ...credentials, password })
               }
             />

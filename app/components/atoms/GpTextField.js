@@ -3,7 +3,7 @@ import { View } from 'react-native';
 import { TextInput, HelperText } from 'react-native-paper';
 import PropTypes from 'prop-types';
 
-const GpTextInput = props => {
+const GpTextField = (props) => {
   const {
     style,
     inputStyle,
@@ -45,7 +45,7 @@ const GpTextInput = props => {
   );
 };
 
-GpTextInput.propTypes = {
+GpTextField.propTypes = {
   style: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
   inputStyle: PropTypes.object,
   required: PropTypes.bool,
@@ -53,8 +53,8 @@ GpTextInput.propTypes = {
   value: PropTypes.string.isRequired,
 };
 
-GpTextInput.defaultProps = {
+GpTextField.defaultProps = {
   required: false,
 };
 
-export default GpTextInput;
+export default GpTextField;
