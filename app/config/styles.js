@@ -536,6 +536,7 @@ export const borderRadiuses = {
 
 export const flex = {
   flex1: { flex: 1 },
+  flex2: { flex: 2 },
   flexGrow: { flexGrow: 1 },
   flexRow: { flexDirection: 'row' },
   flexRowRev: { flexDirection: 'row-reverse' },

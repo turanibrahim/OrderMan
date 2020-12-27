@@ -4,9 +4,9 @@ import { Text, Card, Button } from 'react-native-paper';
 import { useDispatch } from 'react-redux';
 import { GpTextField } from '../../../components/atoms';
 import { registerThunk } from '../redux/thunkActions';
-import { setIsNewUser } from '~/features/main/redux/actions';
+import { setIsNewUser } from '../../../features/main/redux/actions';
 import styles from './styles';
-import { margins } from '~/config/styles';
+import { margins } from '../../../config/styles';
 import { material } from 'react-native-typography';
 
 export default function Register({ navigation }) {
@@ -52,7 +52,7 @@ export default function Register({ navigation }) {
       <View style={[ma2, styles.container]}>
         <Card style={styles.cardWrapper}>
           <Image
-            source={require('~/assets/fast-food.png')}
+            source={require('../../../assets/fast-food.png')}
             style={styles.cardHeaderImage}
           />
           <Card.Content>

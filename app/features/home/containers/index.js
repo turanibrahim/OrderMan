@@ -6,10 +6,10 @@ import Carousel, { Pagination } from 'react-native-snap-carousel';
 import auth from '@react-native-firebase/auth';
 import LinearGradient from 'react-native-linear-gradient';
 import { useDispatch } from 'react-redux';
-import * as mainActions from '~/features/main/redux/actions';
+import * as mainActions from '../../../features/main/redux/actions';
 import { LatestOrders } from '../components';
+import { paddings, margins } from '../../../config/styles';
 import styles from './styles';
-import { paddings, margins } from '~/config/styles';
 
 const windowWidth = Dimensions.get('window').width;
 const orders = [

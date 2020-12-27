@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import { View, Image, KeyboardAvoidingView } from 'react-native';
-import { Text, TextInput, Card, Button } from 'react-native-paper';
-import { useDispatch } from 'react-redux';
-import { loginThunk } from '../redux/thunkActions';
-import styles from './styles';
-import { margins } from '~/config/styles';
+import { Text, Card, Button } from 'react-native-paper';
 import { material } from 'react-native-typography';
+import { useDispatch } from 'react-redux';
+import { GpTextField } from '../../../components/atoms';
+import { loginThunk } from '../redux/thunkActions';
+import { margins } from '../../../config/styles';
+import styles from './styles';
 
 export default function Login({ navigation }) {
   const dispatch = useDispatch();
@@ -41,7 +42,7 @@ export default function Login({ navigation }) {
       <View style={[ma2, styles.container]}>
         <Card style={styles.cardWrapper}>
           <Image
-            source={require('~/assets/fast-food.png')}
+            source={require('../../../assets/fast-food.png')}
             style={styles.cardHeaderImage}
           />
           <Card.Content>
@@ -52,18 +53,18 @@ export default function Login({ navigation }) {
               </Text>
             </View>
 
-            <TextInput
-              style={[my1, { flexDirection: 'row' }]}
+            <GpTextField
+              style={[my1]}
               mode="outlined"
               label="E-Mail"
-              value={credentials.emial}
+              value={credentials.email}
               onChangeText={(email) =>
                 setCredentials({ ...credentials, email })
               }
             />
 
-            <TextInput
-              style={[my1, { flexDirection: 'row' }]}
+            <GpTextField
+              style={[my1]}
               mode="outlined"
               label="Password"
               value={credentials.password}
