@@ -3,7 +3,7 @@ import { createDrawerNavigator } from '@react-navigation/drawer';
 import HomeFeature from '../../../features/home/navigation';
 import UserFeature from '../../../features/user/navigation';
 import CartFeature from '../../../features/cart/navigation';
-import { StyleSheet } from 'react-native';
+import RestaurantList from '../../../features/restaurantList/navigation';
 
 const Drawer = createDrawerNavigator();
 
@@ -39,6 +39,13 @@ function MainDrawerNavigator() {
       icon: 'shopping-cart',
       iconType: 'default',
       component: CartFeature,
+    },
+    {
+      name: 'RestaurantList',
+      title: 'Restaurant List',
+      icon: 'restaurant',
+      iconType: 'default',
+      component: RestaurantList,
     },
   ]);
   return (
