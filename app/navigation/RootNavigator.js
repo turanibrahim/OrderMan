@@ -8,9 +8,9 @@ import {
   setUserCredentials,
   setAuthStatus,
 } from '../features/main/redux/actions';
-import Login from '~/features/auth/containers';
-import Register from '~/features/auth/containers/Register';
-import Main from '~/features/main/navigation';
+import Login from '../features/auth/containers';
+import Register from '../features/auth/containers/Register';
+import Main from '../features/main/navigation';
 
 const Stack = createStackNavigator();
 

@@ -22,7 +22,50 @@ const Cart = ({ navigation }) => {
     orangeDarken1,
   } = colors;
   const [state, setState] = useImmer({
-    orders: [],
+    orders: [
+      {
+        title: 'Katık Döner',
+        logo: 'https://files.sikayetvar.com/lg/cmp/34/34290.png?1522650125',
+        items: [
+          {
+            details: 'Hatay Usulü Zurna Tavuk Döner Dürüm & Patates Menü',
+            quantity: 1,
+            price: 5,
+          },
+          {
+            details: 'Hatay Usulü Zurna Tavuk Döner Dürüm & Patates Menü',
+            quantity: 1,
+            price: 5,
+          },
+          {
+            details: 'Hatay Usulü Zurna Tavuk Döner Dürüm & Patates Menü',
+            quantity: 1,
+            price: 5,
+          },
+        ],
+      },
+      {
+        title: 'Katık Döner',
+        logo: 'https://files.sikayetvar.com/lg/cmp/34/34290.png?1522650125',
+        items: [
+          {
+            details: 'Hatay Usulü Zurna Tavuk Döner Dürüm & Patates Menü',
+            quantity: 1,
+            price: 5,
+          },
+          {
+            details: 'Hatay Usulü Zurna Tavuk Döner Dürüm & Patates Menü',
+            quantity: 1,
+            price: 5,
+          },
+          {
+            details: 'Hatay Usulü Zurna Tavuk Döner Dürüm & Patates Menü',
+            quantity: 1,
+            price: 5,
+          },
+        ],
+      },
+    ],
   });
 
   return (
@@ -43,10 +86,15 @@ const Cart = ({ navigation }) => {
           <View style={flexGrow}>
             <View style={[flex1, flexGrow]}>
               <ScrollView>
-                <CartListOrder bottomBorder />
-                <CartListOrder bottomBorder />
-                <CartListOrder bottomBorder />
-                <CartListOrder />
+                {state.orders.map((order, index) => (
+                  <CartListOrder
+                    key={index}
+                    items={order.items}
+                    title={order.title}
+                    logo={order.logo}
+                    lastItem={state.orders.length === index + 1}
+                  />
+                ))}
               </ScrollView>
             </View>
           </View>

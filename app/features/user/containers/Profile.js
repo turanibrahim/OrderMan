@@ -16,7 +16,7 @@ const Profile = ({ navigation }) => {
   return (
     <View style={[my2, styles.profileContainer]}>
       <Image
-        source={require('~/assets/women1.png')}
+        source={require('../../../assets/women1.png')}
         style={[mt8, styles.profileAvatar]}
       />
       <Text style={material.display1}>İbrahim Turan</Text>

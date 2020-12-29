@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, Text, View, Image } from 'react-native';
 import { color } from 'react-native-reanimated';
 import { material } from 'react-native-typography';
-import { margins, paddings, AppStyles } from '~/config/styles';
+import { margins, paddings, AppStyles } from '../../../config/styles';
 
 const { colors } = AppStyles;
 

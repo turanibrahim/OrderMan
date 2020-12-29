@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { createDrawerNavigator } from '@react-navigation/drawer';
-import HomeFeature from '~/features/home/navigation';
-import UserFeature from '~/features/user/navigation';
-import CartFeature from '~/features/cart/navigation';
+import HomeFeature from '../../../features/home/navigation';
+import UserFeature from '../../../features/user/navigation';
+import CartFeature from '../../../features/cart/navigation';
 import { StyleSheet } from 'react-native';
 
 const Drawer = createDrawerNavigator();
