@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 import { AppHeader } from '../../main/components';
-import { RestaurantList } from '../containers/index';
+import { RestaurantList, RestaurantDetails } from '../containers/index';
 
 const Stack = createStackNavigator();
 
@@ -17,6 +17,14 @@ function RestaurantListFeatureNavigator() {
         options={{
           title: 'Restaurants',
           showBackButton: false,
+        }}
+      />
+      <Stack.Screen
+        name="RestaurantDetails"
+        component={RestaurantDetails}
+        options={{
+          title: 'Restaurant Details',
+          showBackButton: true,
         }}
       />
     </Stack.Navigator>

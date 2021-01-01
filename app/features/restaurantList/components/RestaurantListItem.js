@@ -2,15 +2,15 @@ import React from 'react';
 import { View, Text, Image, StyleSheet } from 'react-native';
 import { Card } from 'react-native-paper';
 import { material } from 'react-native-typography';
-import { margins, flex } from '../../../config/styles';
+import { margins, flex, AppStyles } from '../../../config/styles';
 
 const RestaurantListItem = (props) => {
-  const { brandLogo, title, category, minOrderPrice } = props;
+  const { brandLogo, title, category, minOrderPrice, onPress } = props;
   const { ma1, mr1, my1 } = margins;
   const { flexShrink, flexGrow, flexRow, flex1 } = flex;
 
   return (
-    <Card style={[ma1, styles.overflowHidden]}>
+    <Card style={[ma1, styles.overflowHidden]} onPress={onPress}>
       <View style={[flexRow, flexShrink]}>
         <View style={[mr1, flexShrink]}>
           <Image
@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
   brandLogo: { width: 60, height: '100%' },
   minimumOrderPriceLabel: {
     fontWeight: '700',
-    color: 'red',
+    color: AppStyles.colors.primary,
     fontStyle: 'italic',
   },
 });

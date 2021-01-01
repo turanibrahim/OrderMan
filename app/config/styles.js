@@ -4,13 +4,13 @@
  */
 export const AppStyles = {
   colors: {
-    primary: '#1976D2',
-    secondary: '#424242',
-    accent: '#82B1FF',
+    primary: '#A71622',
+    secondary: '#DA4710',
+    accent: '#5F6A68',
     error: '#FF5252',
-    info: '#2196F3',
-    success: '#4CAF50',
-    warning: '#FFC107',
+    info: '#E1CF89',
+    success: '#30613B',
+    warning: '#EEB437',
     orangeDarken1: '#FB8C00',
     blueLighten5: '#E3F2FD',
     blueLighten4: '#BBDEFB',

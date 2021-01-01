@@ -9,7 +9,6 @@ import { useDispatch } from 'react-redux';
 import * as mainActions from '../../../features/main/redux/actions';
 import { LatestOrders } from '../components';
 import { paddings, margins } from '../../../config/styles';
-import styles from './styles';
 
 const windowWidth = Dimensions.get('window').width;
 const orders = [
@@ -97,14 +96,16 @@ export default function Home() {
   return (
     <View style={{ flex: 1 }}>
       <ScrollView>
-        <LinearGradient colors={['#BDBDBD', '#FFF']} style={[py2]}>
+        <LinearGradient
+          colors={[colors.primary, colors.background]}
+          style={[py2]}>
           <Carousel
             ref={carouselRef}
             data={entries}
             renderItem={RenderItem}
             sliderWidth={windowWidth}
             itemWidth={windowWidth - 64}
-            onSnapToItem={index => setActiveIndex(index)}
+            onSnapToItem={(index) => setActiveIndex(index)}
           />
           <Pagination
             dotsLength={entries.length}

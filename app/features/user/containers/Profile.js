@@ -25,7 +25,7 @@ const Profile = ({ navigation }) => {
         <LinearGradient
           start={{ x: 0, y: 0 }}
           end={{ x: 1, y: 0 }}
-          colors={['#E040FB', '#00BCD4']}
+          colors={['#A71622', '#DA4710', '#E3C469']}
           style={[ma2, br3]}>
           <TouchableOpacity
             style={[px2, py4, styles.profileButton]}
@@ -38,7 +38,7 @@ const Profile = ({ navigation }) => {
         <LinearGradient
           start={{ x: 0, y: 0 }}
           end={{ x: 1, y: 0 }}
-          colors={['#E040FB', '#00BCD4']}
+          colors={['#A71622', '#DA4710', '#E3C469']}
           style={[ma2, br3]}>
           <TouchableOpacity
             style={[px2, py4, styles.profileButton]}
@@ -56,7 +56,7 @@ const Profile = ({ navigation }) => {
         <LinearGradient
           start={{ x: 0, y: 0 }}
           end={{ x: 1, y: 0 }}
-          colors={['#E040FB', '#00BCD4']}
+          colors={['#A71622', '#DA4710', '#E3C469']}
           style={[ma2, br3]}>
           <TouchableOpacity
             style={[px2, py4, styles.profileButton]}

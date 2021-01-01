@@ -4,7 +4,7 @@ import { useImmer } from 'use-immer';
 import { flex, margins } from '../../../config/styles';
 import { RestaurantListItem } from '../components';
 
-const RestaurantList = () => {
+const RestaurantList = ({ navigation }) => {
   const { flex1 } = flex;
   const [state, setState] = useImmer({
     restaurantList: [
@@ -44,6 +44,7 @@ const RestaurantList = () => {
           category={restaurant.category}
           brandLogo={restaurant.brandLogo}
           minOrderPrice={restaurant.minOrderPrice}
+          onPress={() => navigation.navigate('RestaurantDetails')}
         />
       ))}
     </View>
