@@ -72,6 +72,7 @@ export default function Home() {
     },
   ]);
 
+  //TODO: move logout button to drawer when it's created
   const onLogout = () => {
     setLoading(true);
     auth()
@@ -132,7 +133,7 @@ export default function Home() {
           <Text style={[mx1, material.display1]}>Latest Orders</Text>
           <LatestOrders orders={orders} />
         </View>
-        {/* <Button
+        {/* <Button //TODO: move logout button to drawer when it's created
         loading={loading}
         icon="logout"
         mode="outlined"
