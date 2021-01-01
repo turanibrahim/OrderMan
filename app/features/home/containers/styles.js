@@ -14,6 +14,17 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     textAlign: 'center',
   },
+  paginationDot: {
+    width: 8,
+    height: 8,
+    borderRadius: 4,
+    marginHorizontal: 4,
+    backgroundColor: '#212121',
+  },
+  searchInput: {
+    backgroundColor: 'white',
+    borderBottomColor: 'white',
+  },
 });
 
 export default styles;
