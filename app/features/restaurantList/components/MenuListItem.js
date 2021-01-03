@@ -8,12 +8,22 @@ import { flex, paddings, margins, AppStyles } from '../../../config/styles';
 const { colors } = AppStyles;
 
 const MenuListItem = (props) => {
-  const { item } = props;
+  const {
+    section,
+    item,
+    increaseQuantity,
+    decreaseQuantity,
+    addToCart,
+  } = props;
   const { flex1, flexRow, justifySB, justifyCenter, alignItemsCenter } = flex;
-  const { mx1, mx2, my2 } = margins;
+  const { ma0, mx1, mx2, my2 } = margins;
   const { pa2, py1 } = paddings;
   const [isDetailsVisible, setDetailsVisibility] = useState(false);
-  const { title, price, quantity, description } = item;
+  const { id, title, price, quantity, description } = item;
+
+  const checkQuantity = (newQuantity) => {
+    return newQuantity >= 1 ? newQuantity : 1;
+  };
 
   return (
     <Card style={[my2, pa2]}>
@@ -26,10 +36,12 @@ const MenuListItem = (props) => {
             isDetailsVisible && styles.separator,
           ]}>
           <Text style={[mx1, material.title, flex1]}>{title}</Text>
+
           <View style={[flexRow, justifyCenter, alignItemsCenter]}>
             <Text style={[mx1, material.title, { color: colors.info }]}>
               {price} TL
             </Text>
+
             <Icon
               name={
                 isDetailsVisible ? 'keyboard-arrow-up' : 'keyboard-arrow-down'
@@ -60,8 +72,16 @@ const MenuListItem = (props) => {
           <IconButton
             mode="contained"
             icon="plus"
-            size={24}
+            size={20}
+            style={ma0}
             color={colors.primary}
+            onPress={() =>
+              increaseQuantity({
+                sectionId: section.id,
+                itemId: id,
+                newQuantity: quantity + 1,
+              })
+            }
           />
 
           <TextInput
@@ -75,8 +95,16 @@ const MenuListItem = (props) => {
           <IconButton
             mode="contained"
             icon="minus"
-            size={24}
+            size={20}
             color={colors.primary}
+            style={ma0}
+            onPress={() =>
+              decreaseQuantity({
+                sectionId: section.id,
+                itemId: id,
+                newQuantity: checkQuantity(quantity - 1),
+              })
+            }
           />
         </View>
 
@@ -84,7 +112,7 @@ const MenuListItem = (props) => {
           <Button
             style={[flex1, justifyCenter]}
             mode="contained"
-            onPress={console.log('pressed')}>
+            onPress={() => addToCart(item)}>
             Add To Cart
           </Button>
         </View>
