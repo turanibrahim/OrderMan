@@ -6,7 +6,7 @@ import { RestaurantListItem } from '../components';
 
 const RestaurantList = ({ navigation }) => {
   const { flex1 } = flex;
-  const [state, setState] = useImmer({
+  const [state] = useImmer({
     restaurantList: [
       {
         id: 1,
