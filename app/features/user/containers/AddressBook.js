@@ -15,7 +15,7 @@ const AddressBook = ({ navigation }) => {
     addresses: [
       {
         title: 'Home',
-        address: 'Sağlık mah. Güvenlik sok. Altınaykardeşler apt. No:16 D: 10',
+        address: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ',
         city: {
           id: 14,
           name: 'Bolu',
@@ -28,7 +28,7 @@ const AddressBook = ({ navigation }) => {
       },
       {
         title: 'Job',
-        address: 'Teknokent D blok Z07',
+        address: 'Fusce pretium, nisl vel malesuada hendrerit, massa est cursus erat, in volutpat neque odio quis ligula.',
         city: {
           id: 14,
           name: 'Sakarya',
