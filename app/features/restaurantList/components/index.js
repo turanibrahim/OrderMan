@@ -1,3 +1,4 @@
 import RestaurantListItem from './RestaurantListItem';
+import MenuListItem from './MenuListItem';
 
-export { RestaurantListItem };
+export { RestaurantListItem, MenuListItem };
