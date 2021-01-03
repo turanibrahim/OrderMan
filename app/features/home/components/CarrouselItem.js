@@ -3,7 +3,6 @@ import { View, Image, StyleSheet } from 'react-native';
 import { margins } from '../../../config/styles';
 
 const CarrouselItem = ({ item }) => {
-  console.log(item.item);
   const { ma1 } = margins;
 
   return (
