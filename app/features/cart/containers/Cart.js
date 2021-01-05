@@ -11,16 +11,7 @@ const Cart = ({ navigation }) => {
   const { mx2, my2, mt1 } = margins;
   const { pa2 } = paddings;
   const { colors } = useTheme();
-  const {
-    primary,
-    blueDarken1,
-    blueLighten1,
-    blueLighten2,
-    blueLighten3,
-    blueLighten4,
-    blueLighten5,
-    orangeDarken1,
-  } = colors;
+  const { primary, info } = colors;
   const [state, setState] = useImmer({
     orders: [
       {
@@ -70,18 +61,7 @@ const Cart = ({ navigation }) => {
 
   return (
     <View style={flex1}>
-      <LinearGradient
-        colors={[
-          primary,
-          blueDarken1,
-          blueLighten1,
-          blueLighten2,
-          blueLighten3,
-          blueLighten4,
-          blueLighten5,
-          'white',
-        ]}
-        style={flex1}>
+      <LinearGradient colors={[primary, 'white']} style={flex1}>
         <Card style={[mx2, mt1, pa2, flex1]} elevation={0}>
           <View style={flexGrow}>
             <View style={[flex1, flexGrow]}>
@@ -101,7 +81,7 @@ const Cart = ({ navigation }) => {
           <View style={[my2, flexShrink]}>
             <Button
               dark
-              color={orangeDarken1}
+              color={info}
               mode="contained"
               onPress={() => navigation.navigate('Checkout')}>
               Checkout

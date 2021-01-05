@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 import { AppHeader } from '../../main/components';
-import Home from '../containers/index';
+import { Home } from '../containers/';
 
 const Stack = createStackNavigator();
 
@@ -9,7 +9,7 @@ function HomeFeatureNavigator() {
   return (
     <Stack.Navigator
       screenOptions={{
-        header: props => <AppHeader {...props} />,
+        header: (props) => <AppHeader {...props} />,
       }}>
       <Stack.Screen
         name="Home"

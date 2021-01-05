@@ -13,10 +13,10 @@ const PersonalInformation = () => {
   const { pa2 } = paddings;
   const { colors } = useTheme();
   const [state, setState] = useImmer({
-    name: 'İbrahim',
-    surname: 'Turan',
-    birthDate: '14.10.1998',
-    email: 'ibrahimturan98@live.com',
+    name: 'John',
+    surname: 'Doe',
+    birthDate: '01.01.1970',
+    email: 'example@live.com',
   });
 
   return (

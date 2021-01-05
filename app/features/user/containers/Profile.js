@@ -16,16 +16,16 @@ const Profile = ({ navigation }) => {
   return (
     <View style={[my2, styles.profileContainer]}>
       <Image
-        source={require('../../../assets/women1.png')}
+        source={require('../../../assets/man1.png')}
         style={[mt8, styles.profileAvatar]}
       />
-      <Text style={material.display1}>İbrahim Turan</Text>
+      <Text style={material.display1}>John Doe</Text>
 
       <View style={[mx4, py3, styles.profileButtonsContainer]}>
         <LinearGradient
           start={{ x: 0, y: 0 }}
           end={{ x: 1, y: 0 }}
-          colors={['#E040FB', '#00BCD4']}
+          colors={['#A71622', '#DA4710', '#E3C469']}
           style={[ma2, br3]}>
           <TouchableOpacity
             style={[px2, py4, styles.profileButton]}
@@ -38,7 +38,7 @@ const Profile = ({ navigation }) => {
         <LinearGradient
           start={{ x: 0, y: 0 }}
           end={{ x: 1, y: 0 }}
-          colors={['#E040FB', '#00BCD4']}
+          colors={['#A71622', '#DA4710', '#E3C469']}
           style={[ma2, br3]}>
           <TouchableOpacity
             style={[px2, py4, styles.profileButton]}
@@ -56,7 +56,7 @@ const Profile = ({ navigation }) => {
         <LinearGradient
           start={{ x: 0, y: 0 }}
           end={{ x: 1, y: 0 }}
-          colors={['#E040FB', '#00BCD4']}
+          colors={['#A71622', '#DA4710', '#E3C469']}
           style={[ma2, br3]}>
           <TouchableOpacity
             style={[px2, py4, styles.profileButton]}

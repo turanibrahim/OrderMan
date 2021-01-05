@@ -6,7 +6,6 @@ import { material } from 'react-native-typography';
 
 const CartListOrder = (props) => {
   const { lastItem, logo, title, items } = props;
-  console.log(props);
   const {
     flex1,
     flexShrink,
